@@ -1,21 +1,3 @@
-//player 1 and player 2 buttons on load screen,
-//once player button is clicked change color and turn off button,
-//switch to enter username screen (possibly create username password scenario to save previous kd's),
-//use username to toggle player buttons (if username leaves the webpage reactivate player button for other user),
-//switch to RPS screen after username is selected,
-//display a "waiting for opponent" text box if you are the first player in.
-//click either rock paper or scissors,
-//once your play has been selected display a "waiting for oppenent to choose" text box,
-//if opponent is waiting on you display a "opponent is waiting on you" text box,
-//once both players have selected a play count down "rock, paper, scissors, shoot",
-//display both players choices,
-//display "tie" "win" "lose",
-//keep score,
-//restart from beggining of RPS screen,
-//You need to install a failsafe that requires players to insert a username to proceed, this could potentially break the game,
-//Implement chat,
-
-
 var config = {
     apiKey: "AIzaSyCZPa9afHhHKn7NJdkKG5rOyIuAn5idaGY",
     authDomain: "cowboy-bear-ninja.firebaseapp.com",
@@ -23,10 +5,12 @@ var config = {
     projectId: "cowboy-bear-ninja",
     storageBucket: "cowboy-bear-ninja.appspot.com",
     messagingSenderId: "973864038048"
-  };
-  firebase.initializeApp(config);
+};
+firebase.initializeApp(config);
 
 var database = firebase.database();
+var Player1database = database.ref("/players/" + 1);
+var Player2database = database.ref("/players/" + 2);
 
 var isPlayer1Clicked = false;
 var isPlayer2Clicked = false;
@@ -44,7 +28,7 @@ var rps2 = "";
 var chat1 = "";
 var chat2 = "";
 
-var i=0
+var i = 0;
 var intervalID;
 var timeout;
 
@@ -98,14 +82,14 @@ $(document).ready(function () {
         console.log(username1);
 
 
-        var Player1database = database.ref("/players/" + 1)
+        
         
         Player1database.set({
             player1: player1,
-            username1: username1,
+            username1: username1
         });
 
-        Player1database.onDisconnect().remove()
+        Player1database.onDisconnect().remove();
 
         $("#container1").css("display", "none");
         $("#chatSubmit1").css("display", "block");
@@ -123,14 +107,14 @@ $(document).ready(function () {
 
         areYouPlayer2 = true;
 
-       var Player2database = database.ref("/players/" + 2)
+        
         
         Player2database.set({
             player2: player2,
-            username2: username2,
+            username2: username2
         });
 
-        Player2database.onDisconnect().remove()
+        Player2database.onDisconnect().remove();
 
         $("#container1").css("display", "none");
         $("#chatSubmit2").css("display", "block");
