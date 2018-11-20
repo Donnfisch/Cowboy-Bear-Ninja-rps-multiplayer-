@@ -322,7 +322,7 @@ $(document).ready(function () {
     function countdown() {
         i++
 
-        var countdownRPS = ["","Rock!", "Paper!", "Scissors!", "Shoot!"]
+        var countdownRPS = ["","Cowboy!", "Bear!", "Ninja!", "Attack!"]
 
         $("#countdown").html("<h1>" + countdownRPS[i] + "</h1>")
 
