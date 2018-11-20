@@ -1,17 +1,17 @@
 body {
     text-align: center;
-    background-image: url("https://image.ibb.co/ne0dAL/background.png") no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    background-image: url(https://image.ibb.co/gAP24f/background.jpg);
+    background-size:     cover;                      
+    background-repeat:   no-repeat;
+    background-position: center center; 
+    color: white;
 }
 
 #container1 {
     height: 700px;
     margin: 20px;
     display: block;
-    background-color: #06394de3;
+    background-color: rgba(129, 129, 129, 0.658);
 }
 
 #player1-form {
@@ -26,7 +26,7 @@ body {
     height: 700px;
     margin: 20px;
     display: none;
-    background-color: #06364def;
+    background-color: rgba(129, 129, 129, 0.658);
 }
 
 .imgs {
@@ -84,27 +84,27 @@ body {
 }
 
 #player1-card {
-    background-color: #9c7753be
+    background-color: rgba(199, 0, 56, 0.534)
 }
 
 #player2-card {
-    background-color: #9c7753be
+    background-color: rgba(199, 0, 56, 0.534)
 }
 
 #rps1 {
-    background-color: #9c7753be
+    background-color: rgba(199, 0, 56, 0.534)
 }
 
 #rps2 {
-    background-color: #9c7753be
+    background-color: rgba(199, 0, 56, 0.534)
 }
 
 #countdown {
-    background-color: #9c7753be
+    background-color: rgba(199, 0, 56, 0.534)
 }
 
 #messenger {
-    background-color: #9c7753be
+    background-color: rgba(199, 0, 56, 0.534)
 }
 
 #paper1 {
