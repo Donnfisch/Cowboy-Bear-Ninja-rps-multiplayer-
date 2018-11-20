@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ninja Cowboy Bear(RPS-Game)</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Knewave|Rancho|Bungee+Shade" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.6/firebase.js"></script>
+    <script src="assets/javascript/game.js"></script>
+    
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card" id="container1">
+                    <div id="site-header text-center" class="card-body">
+                        <h1><img src="assets/images/title.png"></h1>
+                        <img src="assets/images/Ninja.gif" class="imgs" alt="ninja" width="100"> <img src="assets/images/cowboy.gif" class="imgs" alt="cowboy" width="100"> <img src="assets/images/bear.gif" class="imgs" alt="bear" width="100">
+                        <h1 id="inSession">Someone else is playing, wait you turn.</h1>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="card" id="player1-card">
+                                        <div class="card-body">
+                                            <button type="button" class="btn btn-dark btn-lg" id="Player1-Button">Player
+                                                1</button>
+                                            <form role="form" id="player1-form">
+                                                <div class="form-group row">
+                                                    <label for="player1-input">Enter Username</label>
+                                                    <input class="form-control" id="player1-input" type="text">
+                                                </div>
+                                                <button class="btn btn-secondary" id="submitPlayer1" type="submit">Submit</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card" id="player2-card">
+                                        <div class="card-body">
+                                            <button type="button" class="btn btn-dark btn-lg" id="Player2-Button">Player
+                                                2</button>
+                                            <form role="form" id="player2-form">
+                                                <div class="form-group row">
+                                                    <label for="player1-input">Enter Username</label>
+                                                    <input class="form-control" id="player2-input" type="text">
+                                                </div>
+                                                <button class="btn btn-secondary" id="submitPlayer2" type="submit">Submit</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card" id="container2">
+                    <div class="card-body">
+                        <h1><img src="assets/images/title.png"></h1>
+                        <img src="assets/images/Ninja.gif" class="imgs" alt="ninja" width="100"> <img src="assets/images/cowboy.gif" class="imgs" alt="cowboy" width="100"> <img src="assets/images/bear.gif" class="imgs" alt="bear" width="100">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <h1 id="waiting1">Waiting on player to join!</h1>
+                                    <div class="card" id="rps1">
+                                        <div class="card-body">
+                                            <h1 id="name1">Placeholder</h1>
+                                            <br>
+                                            <div class="rpsimg1" id="rock1">
+                                                <img src="assets/images/Ninja.gif" class="imgs">
+                                            </div>
+                                            <div class="rpsimg1" id="paper1">
+                                                <img src="assets/images/cowboy.gif" class="imgs">
+                                            </div>
+                                            <div class="rpsimg1" id="scissors1">
+                                                <img src="assets/images/bear.gif" class="imgs">
+                                            </div>
+                                            <br>
+                                            <p id="wins1">Wins :</p>
+                                            <p id="losses1">Losses :</p>
+                                            <p id="ties1">Ties :</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card" id="countdown">
+                                        <div class="card-body">
+
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="card" id="messenger">
+                                        <div class="card-body">
+                                            <div id="chatBox">
+
+                                            </div>
+                                            <br>
+                                            <input type="text" id="chatInput" placeholder="enter message here...">
+                                            <br><br>
+                                            <button class="btn btn-default btn-sm btn-block" id="chatSubmit1">Send</button>
+                                            <button class="btn btn-default btn-sm btn-block" id="chatSubmit2">Send</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <h1 id="waiting2">Waiting on player to join!</h1>
+                                    <div class="card" id="rps2">
+                                        <div class="card-body">
+                                            <h1 id="name2">Placeholder</h1>
+                                            <br>
+                                            <div class="rpsimg2" id="rock2">
+                                                <img src="assets/images/Ninja.gif" class="imgs">
+                                            </div>
+                                            <div class="rpsimg2" id="paper2">
+                                                <img src="assets/images/cowboy.gif" class="imgs">
+                                            </div>
+                                            <div class="rpsimg2" id="scissors2">
+                                                <img src="assets/images/bear.gif" class="imgs">
+                                            </div>
+                                            <br>
+                                            <p id="wins2">Wins :</p>
+                                            <p id="losses2">Losses :</p>
+                                            <p id="ties2">Ties :</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card" id="container3">
+                    <div class="card-body">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

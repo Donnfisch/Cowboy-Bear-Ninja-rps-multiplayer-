@@ -1,0 +1,128 @@
+body {
+    text-align: center;
+    background-image: url("../images/background.png") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#container1 {
+    height: 700px;
+    margin: 20px;
+    display: block;
+    background-color: #06394de3;
+}
+
+#player1-form {
+    display: none;
+}
+
+#player2-form {
+    display: none;
+}
+
+#container2 {
+    height: 700px;
+    margin: 20px;
+    display: none;
+    background-color: #06364def;
+}
+
+.imgs {
+    height:100px;
+    width: 100px;
+}
+
+#rps1 {
+    display: none;
+}
+
+#waiting1 {
+    display: none;
+}
+
+#rps2 {
+    display: none;
+}
+
+#waiting2 {
+    display: none;
+}
+
+#container3 {
+    display: none;
+}
+
+#inSession {
+    display: none;
+}
+
+
+#chatBox
+{
+    height:150px;
+    overflow:auto;
+    border: 1px #7777773f solid;
+    text-align: left;
+}
+
+#countdown {
+    height: 100px;
+}
+
+#chatInput {
+    width: 270px;
+}
+
+#chatSubmit1 {
+    display: none;
+}
+
+#chatSubmit2 {
+    display: none;
+}
+
+#player1-card {
+    background-color: #9c7753be
+}
+
+#player2-card {
+    background-color: #9c7753be
+}
+
+#rps1 {
+    background-color: #9c7753be
+}
+
+#rps2 {
+    background-color: #9c7753be
+}
+
+#countdown {
+    background-color: #9c7753be
+}
+
+#messenger {
+    background-color: #9c7753be
+}
+
+#paper1 {
+    width: 135px;
+    float: left;
+}
+
+#scissors1 {
+    width: 135px;
+    float: left;
+}
+
+#paper2 {
+    width: 135px;
+    float: left;
+}
+
+#scissors2 {
+    width: 135px;
+    float: left;
+}
